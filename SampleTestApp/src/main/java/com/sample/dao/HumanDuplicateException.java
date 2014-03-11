@@ -1,6 +1,6 @@
 package com.sample.dao;
 
-public class HumanDuplicateException extends Exception{
+public class HumanDuplicateException extends RuntimeException{
 
 	/**
 	 * 

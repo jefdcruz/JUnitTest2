@@ -1,6 +1,6 @@
 package com.sample.dao;
 
-public class HumanNotFoundException extends Exception{
+public class HumanNotFoundException extends RuntimeException{
 
 	/**
 	 * 

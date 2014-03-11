@@ -22,7 +22,7 @@ public class HumanDaoImpl implements HumanDao {
 	}
 	
 	@Override
-	public void createHuman(Human human) throws HumanDuplicateException  {
+	public void createHuman(Human human)  {
 		if(exists(human.getName())){
 			throw new HumanDuplicateException();
 		}
@@ -30,7 +30,7 @@ public class HumanDaoImpl implements HumanDao {
 	}
 
 	@Override
-	public void updateHuman(Human human) throws HumanNotFoundException{
+	public void updateHuman(Human human){
 		if(!exists(human.getName())){
 			throw new HumanNotFoundException();
 		}
@@ -38,7 +38,7 @@ public class HumanDaoImpl implements HumanDao {
 	}
 
 	@Override
-	public void removeHuman(Human human) throws HumanNotFoundException {
+	public void removeHuman(Human human) {
 		if(!exists(human.getName())){
 			throw new HumanNotFoundException();
 		}
@@ -46,7 +46,7 @@ public class HumanDaoImpl implements HumanDao {
 	}
 
 	@Override
-	public Human findHuman(String name) throws HumanNotFoundException {
+	public Human findHuman(String name) {
 		Human human = humans.get(name);
 		if(human == null){
 			throw new HumanNotFoundException();
