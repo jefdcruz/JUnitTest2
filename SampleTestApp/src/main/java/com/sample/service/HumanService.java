@@ -1,9 +1,13 @@
 package com.sample.service;
 
-import com.sample.model.Human;
-
 public interface HumanService {
-	public void createHuman(Human human);
-	public void removeHuman(Human human);
-	public int findAge(String name);
+	public void createHuman(String name);
+
+	public void removeHuman(String name);
+
+	public void addAge(String name, int age);
+
+	public void decreaseAge(String name, int age);
+
+	public int getAge(String name);
 }
